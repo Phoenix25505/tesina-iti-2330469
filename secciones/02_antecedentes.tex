@@ -1,122 +1,64 @@
 % =====================================================================================
 % REVISIÓN 1  -  Antecedentes (del problema, de la empresa y teóricos) y tabla comparativa
-% Escribe tu texto FUERA de los recuadros \begin{guia} ... \end{guia}.
 % =====================================================================================
 
 \section{Antecedentes} \label{sec:antecedentes}
 
-\begin{guia}[Guía: Antecedentes (Revisión 1)]
-Este capítulo sitúa tu proyecto: qué se ha hecho antes, en qué organización ocurre y qué conceptos lo sustentan.
-Tiene tres apartados (\emph{del problema}, \emph{de la empresa}, \emph{teóricos}) y una \emph{tabla comparativa}.
-Escribe aquí, si quieres, un párrafo breve que presente los apartados.
-\end{guia}
+Este capítulo del proyecto tiene un enfoque descriptivo sobre los antecedentes del problema, antecedentes de la empresa y antecedentes teóricos, terminando con una tabla comparativa que contrasta los trabajos revisados con el proyecto.
 
 \subsection{Antecedentes del problema} \label{sec:antecedentes_problema} % audit:req=antecedentes
 
-\begin{guia}[Guía: Antecedentes del problema (Revisión 1)]
-\textbf{¿Para qué sirve?} Muestra que conoces lo que ya existe sobre el problema y justifica que haga falta tu trabajo.
+La predicción del consumo eléctrico ha sido abordada desde distintos enfoques a lo largo de las últimas décadas. En el ámbito académico, los modelos han evolucionado desde aproximaciones puramente estadísticas hasta enfoques híbridos que combinan componentes cíclicas y de tendencia. En el ámbito institucional, diversos organismos han desarrollado plataformas para poner esta información a disposición de distintos públicos.
 
-\textbf{Debe responder:}
-\begin{itemize}[nosep,leftmargin=*]
-  \item ¿Cómo ha evolucionado o se ha enfrentado este problema? (breve recorrido histórico o de contexto).
-  \item ¿Qué soluciones, sistemas, tesis o artículos existentes abordan el mismo problema o uno parecido (mínimo 3, con
-        cita \verb|\cite{clave}|)?
-  \item ¿Qué hace cada uno, qué ventajas y qué limitaciones tiene?
-  \item ¿Qué queda sin resolver y cómo se conecta con tu propuesta?
-\end{itemize}
+\subsubsection{Casos internacionales de plataformas públicas de predicción eléctrica}
 
-\textbf{Extensión mínima:} 120 palabras. \textbf{Fuentes:} libros, artículos, documentación técnica oficial o sistemas
-reales; evita depender solo de blogs.
+El PNUD e IBM lanzaron en 2024 el modelo \textit{Electricity Access Forecasting} en la plataforma GeoHub, que proporciona predicciones del acceso a la electricidad hasta 2030 en 102 países, disponible gratuitamente para el público general \cite{ibm2024}. Enedis, el operador de distribución eléctrica francés, ofrece datos abiertos de consumo eléctrico por sector y sensibilidad térmica en múltiples escalas geográficas \cite{enedis2026}. El modelo EnergyCast, desarrollado dentro del EU LDT Toolbox, permite a las ciudades prever la demanda eléctrica mediante modos de inferencia y entrenamiento \cite{energycast2025}.
 
-\textbf{Errores frecuentes:} listar herramientas sin analizarlas; no citar; copiar descripciones comerciales.
+\subsubsection{Situación en México}
 
-\textbf{Cómo se revisa:} pertinencia de las fuentes, análisis crítico y conexión explícita con el problema.
-\end{guia}
-
-% >>> ESCRIBE AQUÍ los antecedentes del problema <<<
-
+México cuenta con el PRODESEN, instrumento de planeación del Sistema Eléctrico Nacional con horizonte a quince años \cite{prodesen2023}. El programa incorpora elementos relevantes del Programa Indicativo para la Instalación y Retiro de Centrales Eléctricas (PIIRCE), los Programas de Ampliación y Modernización de la Red Nacional de Transmisión (PAMRNT) y el Programa de las Redes Generales de Distribución (PAMRGD). Sin embargo, esta información se publica como documento PDF, lo que limita su alcance y accesibilidad. El CENACE publica pronósticos de demanda horaria y mantiene una gráfica de demanda en tiempo real que muestra la Demanda Bruta Actual, Demanda Neta y Pronóstico Neto para cada región del Sistema Interconectado Nacional. No obstante, esta información es de carácter indicativo y está orientada a la operación del mercado eléctrico, no al consumo ciudadano \cite{cenace2026}.
 
 \subsection{Antecedentes de la empresa} \label{sec:antecedentes_empresa} % audit:req=antecedentes_empresa
 
-\begin{guia}[Guía: Antecedentes de la empresa u organismo receptor (Revisión 1)]
-\textbf{¿Para qué sirve?} Describe la organización donde realizas la estadía y el proceso que tu proyecto mejora.
+La Secretaría de Desarrollo Energético de Tamaulipas es un órgano especializado creado en 2023 dentro de la estructura del gobierno estatal, con el propósito de coordinar e impulsar el desarrollo institucional de los asuntos energéticos a nivel estatal. Como dependencia gubernamental, tiene a su cargo la formulación e implementación de políticas públicas en materia energética, la coordinación de recursos para la concreción de proyectos del sector, la promoción del aprovechamiento de energías renovables y el diseño de estrategias que apoyen la transición energética.
 
-\textbf{Debe responder:}
-\begin{itemize}[nosep,leftmargin=*]
-  \item ¿Quién es el organismo receptor? (giro o sector, ubicación, breve historia, misión y visión).
-  \item ¿Cuál es su estructura y en qué área o departamento se realiza tu proyecto? (organigrama opcional).
-  \item ¿Cómo se realiza hoy el proceso que vas a mejorar? ¿con qué personas, herramientas o sistemas?
-  \item ¿Quién es tu asesor empresarial y cuál es su función?
-\end{itemize}
+La creación de esta secretaría refleja la creciente importancia estratégica de Tamaulipas en el panorama energético de México. Gracias a su ubicación geográfica y a su dotación de recursos naturales, el estado cuenta con ventajas significativas en materia de producción, transmisión y cooperación transfronteriza en el sector energético; la instauración de la secretaría responde precisamente a la necesidad de aprovechar sistemáticamente estas ventajas y posicionar al estado como un nodo clave del desarrollo energético nacional.
 
-\textbf{Extensión mínima:} 100 palabras.
-
-\textbf{Cuidado:} pide autorización a la empresa para publicar información; no incluyas datos confidenciales ni
-datos personales.
-
-\textbf{Errores frecuentes:} copiar la página web de la empresa; no describir el proceso actual (es lo más importante).
-
-\textbf{Cómo se revisa:} que se entienda el contexto operativo real del proyecto.
-\end{guia}
-
-% >>> ESCRIBE AQUÍ los antecedentes de la empresa <<<
-
+La secretaría cuenta con diversas direcciones especializadas, entre las que destacan, por su relación directa con la predicción y planeación energética: la Dirección de Planeación y Evaluación, encargada de la planeación, coordinación y evaluación de políticas energéticas, así como de impulsar proyectos de desarrollo sostenible y energías renovables; y la Dirección General de Innovación y Desarrollo Energético Sostenible, enfocada en la innovación tecnológica para la sostenibilidad y la eficiencia energética. Las funciones de estas direcciones guardan una estrecha correspondencia con el sistema de predicción desarrollado en el presente proyecto, lo que proporciona un respaldo institucional y un contexto de política claramente definido.
 
 \subsection{Antecedentes teóricos} \label{sec:antecedentes_teoricos} % audit:req=antecedentes_teoricos
 
-\begin{guia}[Guía: Antecedentes teóricos (Revisión 1)]
-\textbf{¿Para qué sirve?} Presenta, de manera panorámica, los conceptos y tecnologías base de tu proyecto. El desarrollo
-completo va en el \emph{Marco teórico} (Revisión 2); aquí basta con lo esencial para entender el planteamiento.
+El proyecto se sustenta en tres pilares teóricos fundamentales. El primero es el \textbf{análisis de Fourier}, una herramienta matemática que permite descomponer series temporales periódicas en sus componentes de frecuencia. En el contexto del consumo eléctrico, esta técnica permite identificar la frecuencia dominante de las oscilaciones estacionales, que en el caso de México corresponde a un período de cuatro trimestres (un año), confirmando la relación entre consumo y estaciones climáticas \cite{bordallo2025}.
 
-\textbf{Debe responder:} ¿qué conceptos, teorías o tecnologías necesita conocer el lector? ¿por qué son relevantes para
-tu proyecto? ¿qué fuentes los respaldan?
+El segundo pilar es la \textbf{función logística}, introducida por Pierre François Verhulst para modelar el crecimiento poblacional con límites de recursos. Su aplicación al consumo eléctrico permite modelar la tendencia de crecimiento que inicialmente es exponencial y luego se desacelera al acercarse a un límite superior o valor de saturación \cite{duan2023}. Esta función ha sido adaptada para modelar el consumo eléctrico en diversos contextos nacionales, incluyendo México \cite{bordallo2025}.
 
-\textbf{Extensión mínima:} 150 palabras (sin contar la tabla comparativa).
+El tercer pilar lo constituyen las \textbf{tecnologías de desarrollo web moderno}, específicamente React y Vite. React es una biblioteca de JavaScript para construir interfaces de usuario basadas en componentes reutilizables, mientras que Vite es una herramienta de construcción que aprovecha los módulos ES nativos del navegador para ofrecer un desarrollo rápido y eficiente \cite{react2024, vite2024}. Estas tecnologías permiten implementar la capa de visualización interactiva que traduce los resultados del modelo predictivo en información accesible para los tomadores de decisiones.
 
-\textbf{Errores frecuentes:} definiciones sueltas sin relación con el proyecto; fuentes sin citar.
+La combinación de estos tres pilares da lugar al \textbf{modelo híbrido Fourier-Logístico}, propuesto por Bordallo Favela y colaboradores \cite{bordallo2025}, que integra la componente cíclica (Fourier) y la componente de tendencia (logística) para pronosticar el consumo eléctrico con alta precisión (MAPE de 2.44\%).
 
-\textbf{Cómo se revisa:} pertinencia y suficiencia de los conceptos, y calidad de las citas.
-\end{guia}
+\subsubsection{Tabla comparativa de antecedentes} \label{subsec:tabla_comparativa_antecedentes} % audit:req=tabla_comparativa 
 
-% >>> ESCRIBE AQUÍ los antecedentes teóricos <<<
+En la Tabla~\ref{tab:comparativa_antecedentes} se comparan los trabajos y plataformas revisados con la propuesta de este proyecto, considerando criterios como el usuario objetivo, la función principal, el horizonte de predicción y el formato de acceso.
 
+\begin{table}[H]
+  \centering
+  \caption{Comparación de trabajos relacionados con la propuesta.}
+  \label{tab:comparativa_antecedentes}
+  \begin{tabular}{@{}p{3.0cm}p{2.8cm}p{2.8cm}p{2.5cm}p{2.5cm}@{}}
+    \toprule
+    \textbf{Trabajo} & \textbf{Usuario objetivo} & \textbf{Función principal} & \textbf{Horizonte} & \textbf{Formato de acceso} \\
+    \midrule
+    GeoHub (PNUD/IBM) \cite{ibm2024} & Responsables políticos, público & Predicción de acceso a electricidad & Hasta 2030 & Dashboard interactivo \\
+    \addlinespace
+    EnergyCast \cite{energycast2025} & Ciudades & Planificación energética & Días a meses & Modelo integrable \\
+    \addlinespace
+    PRODESEN (México) \cite{prodesen2023} & Sector energético, gobierno & Planeación nacional & 15 años & PDF, Excel \\
+    \addlinespace
+    CENACE (México) \cite{cenace2026} & Participantes del mercado & Operación del sistema & 7 días & Gráficas web \\
+    \addlinespace
+    \textbf{Propuesta: Módulo frontend Fourier-Logístico} & \textbf{Tomadores de decisiones, público técnico} & \textbf{Visualización interactiva de predicciones de consumo} & \textbf{46 años} & \textbf{Dashboard interactivo (React + Vite)} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
-\subsubsection{Tabla comparativa de antecedentes} \label{subsec:tabla_comparativa_antecedentes} % audit:req=tabla_comparativa
-
-\begin{guia}[Guía: Tabla comparativa de antecedentes (Revisión 1)]
-\textbf{¿Para qué sirve?} Compara de forma objetiva los trabajos o sistemas existentes con lo que propones.
-
-\textbf{Debe incluir:}
-\begin{itemize}[nosep,leftmargin=*]
-  \item Una fila por trabajo o sistema (mínimo 3), cada uno con su cita \verb|\cite{clave}|.
-  \item Columnas con \emph{criterios} relevantes para tu proyecto (funcionalidades, tecnología, costo, precisión,
-        escalabilidad, limitaciones\ldots).
-  \item Una fila final con \textbf{tu propuesta}, para que se vea qué aporta de distinto.
-  \item Un pie de tabla (\verb|\caption|), una etiqueta (\verb|\label{tab:...}|) y una referencia en el texto
-        (\verb|Tabla~\ref{tab:...}|), además de un párrafo que \emph{interprete} la tabla.
-\end{itemize}
-Usa \verb|booktabs| (\verb|\toprule|, \verb|\midrule|, \verb|\bottomrule|) y evita líneas verticales. Hay un ejemplo
-completo en \texttt{ejemplos/ejemplos\_latex.tex}.
-
-\textbf{Errores frecuentes:} tabla sin analizar en el texto; criterios que no ayudan a decidir; no incluir la propuesta.
-
-\textbf{Cómo se revisa:} se verifica automáticamente que exista una tabla; el director valora que los criterios sean
-significativos.
-\end{guia}
-
-% Quita el % de estas líneas y adáptalas (o copia el ejemplo de ejemplos/ejemplos_latex.tex):
-% \begin{table}[H]
-%   \centering
-%   \caption{Comparación de trabajos relacionados con la propuesta.}
-%   \label{tab:comparativa_antecedentes}
-%   \begin{tabular}{@{}p{3.4cm}p{3.4cm}p{3.4cm}p{3.4cm}@{}}
-%     \toprule
-%     \textbf{Trabajo} & \textbf{Criterio 1} & \textbf{Criterio 2} & \textbf{Limitación} \\
-%     \midrule
-%     Autor A \cite{claveA} & \dots & \dots & \dots \\
-%     Autor B \cite{claveB} & \dots & \dots & \dots \\
-%     \textbf{Propuesta (este trabajo)} & \dots & \dots & \dots \\
-%     \bottomrule
-%   \end{tabular}
-% \end{table}
-% >>> ESCRIBE AQUÍ el análisis de la tabla comparativa (cítala con Tabla~\ref{tab:comparativa_antecedentes}) <<<
+El análisis de la Tabla~\ref{tab:comparativa_antecedentes} revela que las plataformas internacionales (GeoHub, EnergyCast) ofrecen interfaces interactivas y acceso público, pero ninguna de ellas se enfoca específicamente en el consumo eléctrico estatal en México. Por otro lado, los instrumentos mexicanos (PRODESEN, CENACE) cumplen funciones de planeación y operación, pero carecen de una capa de interfaz ciudadana que traduzca los resultados predictivos en información accesible. La propuesta de este proyecto se distingue por combinar el modelo híbrido Fourier-Logístico con una interfaz web construida con React y Vite, cubriendo un horizonte de predicción de 46 años y ofreciendo un formato de acceso tipo dashboard que no existe actualmente en el ecosistema de información energética mexicano.

@@ -6,135 +6,82 @@
 
 \section{Introducción} \label{sec:introduccion} % audit:req=introduccion
 
-\begin{guia}[Guía: Introducción (Revisión 1)]
-\textbf{¿Para qué sirve?} Presenta tu trabajo a un lector que no lo conoce y lo invita a seguir leyendo. Es el resumen
-``de entrada'' del proyecto: contexto, problema, propuesta y organización del documento.
+La electricidad constituye uno de los servicios básicos fundamentales para el funcionamiento de la sociedad moderna. Su disponibilidad sostiene actividades cotidianas que van desde el uso de electrodomésticos hasta procesos importantes como el funcionamiento de sistemas de drenaje, hospitales e industria. En entornos urbanos, la interrupción del suministro eléctrico no solo afecta al sector domestico, sino que puede comprometer servicios esenciales y generar pérdidas económicas significativas. Por ello, garantizar un suministro eléctrico confiable, suficiente y sostenible es una prioridad tanto para los gobiernos como para los operadores del sistema eléctrico.
 
-\textbf{Debe responder:}
-\begin{itemize}[nosep,leftmargin=*]
-  \item ¿En qué contexto (sector, empresa, área tecnológica) se desarrolla el proyecto?
-  \item ¿Cuál es el problema o la necesidad, dicho en pocas líneas? (el detalle va en \emph{Planteamiento del problema}).
-  \item ¿Qué se propone hacer y qué se espera lograr?
-  \item ¿Por qué es importante? (una idea; el detalle va en \emph{Justificación}).
-  \item ¿Cómo está organizado el documento? (una frase por sección o capítulo).
-\end{itemize}
+La Secretaria de Desarrollo Energético de Tamaulipas se encarga de coordinar el desarrollo energético en el estado y de crear políticas publicas y promover la participación ciudadana en las actividades del sector energético del estado. Entre los principales trabajos de la Secretaria de Desarrollo Energético de Tamaulipas se encuentra el Sistema de Información Energético del Estado de Tamaulipas (SIEET), el cual es una plataforma web desarrollada con información publica y con librerías de licencia gratuita que brinda una visión completa sobre el estado energético de Tamaulipas.
 
-\textbf{Extensión mínima:} 150 palabras (1 a 2 páginas), redactadas con tus propias palabras.
+Sin embargo,la falta de información para la planeación para el suministro eléctrico es algo que puede afectar a futuro tanto al sector domestico como el industrial. Se decidió la implementacion de un nuevo modulo dentro de la plataforma denominado ``Modelos predictivos'' el cual proporciona información a corto, mediano y largo plazo sobre el suministro eléctrico, dando contexto a la población en general y a posibles interesados en realizar proyectos en Tamaulipas.
 
-\textbf{Errores frecuentes:} copiar definiciones de Internet; escribir solo ``en este capítulo se verá\ldots'' sin decir
-nada concreto; dejar la introducción para el final y no actualizarla cuando el proyecto cambia.
+La plataforma se compone de dos partes, el backend y el frontend. El backend se construyo utilizando python y bases de datos sql, se administra mediante la plataforma pgAdmin4. El frontend esta hecho utilizando React y Vite, esta construido mediante módulos los cuales se unen durante la ejecución, muchos de sus elementos como las graficas o bloques de información son módulos individuales lo que permite la edición de cada elemento de manera individual sin afectar a los otros elementos de la plataforma 
+%En caso de necesitarlo explicar mas a detalle el backend, las liberias y las conexiones a la base de datos y servidores
+El modulo de predicciones se implementa en el frontend y gracias a la versatilidad de React y Vite a la hora de construir paginas web basadas en módulos, se sigue utilizando las herramientas para el desarrollo del nuevo modulo de predicciones, ademas React permite visualizar los datos y analizar los resultados del modelo aplicado a la predicción del consumo eléctrico a nivel nacional y en los estados del norte y mostrarlas de una forma sencilla de interpretar por una persona que desconoce del tema, el modelo se utilizara para mostrar las predicciones de consumo nacional y de cada uno de los estados del norte (Baja California, Chihuahua, Coahuila, Nuevo León, Sonora y Tamaulipas).
 
-\textbf{Cómo se revisa:} claridad del contexto, que el problema y la propuesta se entiendan sin leer el resto, y que la
-organización descrita coincida con las secciones reales del documento.
-\end{guia}
-
-% >>> ESCRIBE AQUÍ el texto de la introducción (fuera de la guía) <<<
-
+El proyecto tiene como beneficios la ampliación del acceso a la información por parte de la ciudadanía, ya que, algo que es muy común en la ciudadanía, es el desconocimiento de la información que utiliza el gobierno a la hora de realizar obras publicas, por lo que puede generar incertidumbre sobre el uso de los recursos del gobierno, por lo que el SIEET se creo pensando en solucionar parte de dicho problema y este nuevo modulo es para ampliar la información disponible al publico y que de esta manera la ciudadanía pueda estar mejor informada.
+%Se implemento el nuevo modulo de predicción utilizando el modelo de predicción híbrido Fourier-Logístico desarrollado por la Dra. Ruth Azucena Bordallo Favela en su investigación "Modeling the Energy Transition in Mexico: forecasting under economic and climatic drivers\", el cual esta basado en el análisis de Fourier y en la función logística, el modelo ha demostrado una alta precisión en la predicción del consumo eléctrico nacional, con un error porcentual absoluto medio (MAPE) de 2.44\%. 
 
 \subsection{Planteamiento del problema} \label{sec:problema} % audit:req=planteamiento
 
-\begin{guia}[Guía: Planteamiento del problema (Revisión 1)]
-\textbf{¿Para qué sirve?} Describe con precisión la situación que quieres resolver y demuestra que es un problema real.
+En México, la Comisión Federal de Electricidad (CFE) es la empresa estatal responsable de la generación, transmisión, distribución y comercialización de la energía eléctrica. Entre sus objetivos estratégicos se encuentran satisfacer la demanda nacional de electricidad, reducir los costos del suministro y modernizar su red inteligente\cite{cfe2024}. Para cumplir con estas metas, la CFE emplea diversos métodos de generación. En el estado de Tamaulipas, los métodos dominantes son la generación por ciclo combinado y la generación eólica, complementados por otras tecnologías que representan un porcentaje menor de la capacidad instalada\cite{sener2024}.
 
-\textbf{Debe responder:}
-\begin{itemize}[nosep,leftmargin=*]
-  \item ¿Qué situación actual es insatisfactoria o genera una necesidad? Descríbela con hechos, ejemplos o cifras.
-  \item ¿Quién la padece (usuarios, área, empresa) y cómo se manifiesta (retrasos, errores, costos, quejas)?
-  \item ¿Qué consecuencias tiene no resolverla?
-  \item ¿Qué se ha intentado hasta ahora y qué falta (la brecha)? Conecta con los \emph{Antecedentes}.
-  \item ¿Cuál es el problema en una sola frase? Escríbelo como enunciado del problema o como pregunta de
-        investigación (p. ej. ``¿Cómo reducir X en Y mediante Z?'').
-\end{itemize}
+Con el paso del tiempo, el crecimiento económico del país ha traído consigo un aumento de la población y de la actividad industrial, lo que se traduce en una mayor demanda de energía eléctrica. Este incremento sostenido plantea un desafío para la CFE y para las autoridades energéticas: anticipar con precisión cuánta electricidad será necesaria en el futuro para planificar oportunamente la construcción de nuevas centrales, la ampliación de la infraestructura de transmisión y la implementación de políticas de eficiencia energética.
 
-\textbf{Extensión mínima:} 120 palabras.
+Si bien existen estudios académicos que abordan la predicción del consumo eléctrico, gran parte de esa información permanece permanecen en el ámbito teórico o requieren conocimientos técnicos especializados para su interpretación, lo que puede dar pie a malentendidos con la ciudadanía ya que tienen derecho a conocer las razones de por que el gobierno y la falta de información para la planeación para el suministro eléctrico es algo que puede afectar a futuro tanto al sector domestico como el industrial.
 
-\textbf{Errores frecuentes:} describir la solución en lugar del problema (``el problema es que no hay un sistema web'');
-problemas sin evidencia; enunciados tan amplios que no se pueden resolver en una estadía.
-
-\textbf{Cómo se revisa:} que el problema esté delimitado, sea verificable y que los objetivos lo atiendan.
-\end{guia}
-
-% >>> ESCRIBE AQUÍ el planteamiento del problema <<<
-
+%\subsubsection{Objetivo}
 
 \subsection{Objetivos} \label{sec:objetivos} % audit:req=objetivos
 
-\begin{guia}[Guía: Objetivo general y objetivos específicos (Revisión 1)]
-\textbf{¿Para qué sirve?} Fija qué vas a lograr. Todo lo demás (resultados y conclusiones) se compara contra estos objetivos.
-
-\textbf{Objetivo general} (uno): verbo en infinitivo + qué se hará + con qué o cómo + para qué, y si es posible un criterio
-medible. \emph{Ejemplo:} ``Desarrollar un sistema web de notificaciones para familiares de pacientes hospitalizados que
-reduzca en 50\% las llamadas de consulta al área de enfermería.''
-
-\textbf{Objetivos específicos} (de 3 a 6): pasos concretos y verificables que, al cumplirse, logran el objetivo general.
-Cada uno debe poder demostrarse con un resultado (un módulo, un diagrama, un experimento) que luego aparecerá en
-\emph{Resultados} y se retomará en \emph{Conclusiones}. Deben ser SMART: específicos, medibles, alcanzables, relevantes y
-con tiempo definido.
-
-\textbf{Debe responder:} ¿qué voy a entregar? ¿cómo sabré que lo logré? ¿cada objetivo específico aporta al general?
-
-\textbf{Extensión mínima:} 40 palabras en total.
-
-\textbf{Errores frecuentes:} verbos no medibles (``conocer'', ``entender'', ``estudiar''); objetivos que son actividades
-(``investigar sobre\ldots'') y no logros; más de un objetivo general; objetivos que luego no se atienden en el documento.
-
-\textbf{Cómo se revisa:} coherencia con el problema, medibilidad y que cada objetivo tenga un resultado asociado.
-\end{guia}
-
 \subsubsection{Objetivo general} \label{subsec:objetivo_general}
-% >>> ESCRIBE AQUÍ el objetivo general (una sola oración) <<<
+Implementacion del módulo ``Modelos predictivos'' en el frontend, construido con React y Vite, que permita visualizar y analizar los resultados del modelo híbrido Fourier-Logístico aplicado a la predicción del consumo eléctrico a nivel nacional y los estados de la region norte. El sistema pondrá a disposición de los usuarios del SIEET una interfaz interactiva para consultar series históricas con el fin de apoyar la planeación energética estatal.
 
 \subsubsection{Objetivos específicos} \label{subsec:objetivos_especificos}
-% >>> ESCRIBE AQUÍ los objetivos específicos como lista numerada: \begin{enumerate} \item ... \end{enumerate} <<<
+    \begin{enumerate}
+       \item Explicación del modelo de la función logística, el modelo Fourier-logístico y la curva de crecimiento.
+	 %\item Publicar datos abiertos que utiliza el gobierno para planificar los proyectos de política publica
+        
+	\item Visualizacion de los datos del consumo nacional de energía eléctrica y su tendencia logística, así como graficas de comparación entre los datos de consumo y el diagnostico del modelo de Fourier-logístico a nivel nacional y a nivel los estados de la region norte.
+        \item Mostrar los horizontes críticos del país y de los estados de la region norte.
+    \end{enumerate}
 
 
 \subsection{Justificación} \label{sec:justificacion} % audit:req=justificacion
 
-\begin{guia}[Guía: Justificación (Revisión 1)]
-\textbf{¿Para qué sirve?} Explica por qué vale la pena dedicar tiempo y recursos a este proyecto.
+El Sistema de Información Energético del Estado de Tamaulipas (SIEET), desarrollado por la Secretaría de Desarrollo Energético de Tamaulipas, tiene como finalidad facilitar el diagnóstico, la planeación y la programación de acciones gubernamentales orientadas a incrementar la oferta, diversificación, eficiencia y cultura energética en la entidad. Está dirigido a la ciudadanía para consulta y planeacion del sistema electrico, por lo que su diseño privilegia la accesibilidad y facilidad de uso mediante una interfaz web.
 
-\textbf{Debe responder:}
-\begin{itemize}[nosep,leftmargin=*]
-  \item ¿Quién se beneficia y de qué manera? (empresa, usuarios, la comunidad, tú).
-  \item ¿Qué se gana en términos prácticos, económicos, sociales, tecnológicos o científicos? Usa datos cuando existan.
-  \item ¿Qué pasaría si no se hace?
-  \item ¿Por qué es viable hacerlo ahora y por qué con este enfoque?
-  \item ¿Cómo se relaciona con el perfil de egreso de tu programa académico?
-\end{itemize}
+La integración de un módulo de predicción del consumo eléctrico en el SIEET representa una oportunidad para fortalecer capacidades analíticas y ofrecer a los usuarios una herramienta que anticipe escenarios futuros de demanda. El modelo desarrollado por la Dra. Ruth Azucena Bordallo Favela en su investigación  ``Modeling the Energy Transition in Mexico: forecasting under economic and climatic drivers'', basado en el análisis de Fourier y en la función logística, ha demostrado una alta precisión en la predicción del consumo eléctrico nacional, con un error porcentual absoluto medio (MAPE) de 2.44\%\cite{bordallo2025}. Su implementación en un entorno web interactivo permitiría traducir estos resultados en información visual y comprensible para apoyar la toma de decisiones a largo plazo.
 
-\textbf{Extensión mínima:} 100 palabras.
-
-\textbf{Errores frecuentes:} repetir el problema con otras palabras; afirmaciones sin sustento (``mejorará mucho la
-eficiencia''); olvidar al beneficiario.
-
-\textbf{Cómo se revisa:} que los beneficios sean concretos y consistentes con el problema y los objetivos.
-\end{guia}
-
-% >>> ESCRIBE AQUÍ la justificación <<<
-
+El proyecto contribuye a la modernizacion de las herramientas de distribucion de informacion a la ciudadania por parte del gobierno utilizando las tecnologias de programacion web y un modelo de prediccion sencillo. Esto puede dar puerta a que se utilicen herramientas mas modernas para una mejor distribucion de informacion en otras areas del gobierno.
 
 \subsection{Alcances y limitaciones} \label{sec:alcances_limitaciones} % audit:req=alcances
 
-\begin{guia}[Guía: Alcances y limitaciones (Revisión 1)]
-\textbf{¿Para qué sirve?} Marca las fronteras del proyecto para evitar expectativas irreales.
-
-\textbf{Alcances} -- lo que \emph{sí} incluye el trabajo. Debe responder: ¿qué módulos, funciones, procesos, usuarios o
-datos se cubren? ¿en qué plataformas o entornos? ¿qué entregables habrá? ¿qué queda \emph{explícitamente fuera}?
-
-\textbf{Limitaciones} -- lo que restringe el trabajo y que no depende totalmente de ti. Debe responder: ¿qué límites hay
-de tiempo (un cuatrimestre), recursos, acceso a datos o a la infraestructura de la empresa, tecnología, permisos?
-¿cómo pueden afectar la validez o generalización de los resultados?
-
-\textbf{Extensión mínima:} 60 palabras en total.
-
-\textbf{Errores frecuentes:} prometer más de lo que cabe en la estadía; confundir limitaciones con excusas; no decir qué
-queda fuera.
-
-\textbf{Cómo se revisa:} realismo del alcance y honestidad de las limitaciones.
-\end{guia}
-
 \subsubsection{Alcances} \label{subsec:alcances}
-% >>> ESCRIBE AQUÍ los alcances <<<
+El presente proyecto tiene como propósito desarrollar un módulo en el frontend, construido con React y Vite, que permita visualizar y analizar los resultados del modelo híbrido Fourier-Logístico aplicado a la predicción del consumo eléctrico. Con base en lo anterior, los alcances del proyecto son los siguientes:
+
+\begin{itemize}
+    \item \textbf{Implementación del modelo predictivo:} se desarrollará el modelo híbrido Fourier-Logístico, integrando la componente cíclica mediante el análisis de Fourier y la componente de tendencia mediante la función logística, de acuerdo con la formulación propuesta por Bordallo Favela y colaboradores.
+    
+    \item \textbf{Análisis de datos históricos:} se utilizarán series temporales de consumo eléctrico y desarrollo económico (IGAE) provenientes de fuentes oficiales como el Sistema de Información Energética (SIE) de la SENER y el INEGI.
+    
+    \item \textbf{Visualización interactiva:} se construirá una interfaz de usuario que permita visualizar las series históricas de consumo eléctrico, las proyecciones del modelo a largo plazo y la comparación entre ambas, utilizando bibliotecas de gráficos como Chart.js o Recharts.
+    
+    \item \textbf{Arquitectura escalable:} el módulo frontend se diseñará con una arquitectura de componentes reutilizables y una separación clara entre las capas de datos, lógica y presentación, lo que facilitará su extensión a nivel estatal o municipal en futuras iteraciones.
+\end{itemize}
 
 \subsubsection{Limitaciones} \label{subsec:limitaciones}
-% >>> ESCRIBE AQUÍ las limitaciones <<<
+El proyecto reconoce las siguientes limitaciones, derivadas tanto de la naturaleza de los datos disponibles como de las decisiones de diseño adoptadas:
+
+\begin{itemize}
+    \item \textbf{Disponibilidad y calidad de los datos:} la precisión del modelo depende directamente de la disponibilidad, actualización y consistencia de las series históricas de consumo eléctrico y temperatura. La ausencia de datos desagregados a nivel municipal o por sector limita el nivel de detalle del análisis.
+    
+    \item \textbf{Horizonte de predicción:} si bien el modelo permite proyectar el consumo hasta el punto de saturación (aproximadamente 46 años), la incertidumbre asociada a las predicciones aumenta conforme se extiende el horizonte temporal, especialmente por la posible ocurrencia de eventos atípicos (crisis económicas, cambios tecnológicos disruptivos o políticas energéticas radicales).
+    
+    \item \textbf{Supuestos del modelo:} el modelo asume que la relación entre consumo y desarrollo económico se mantiene estable en el tiempo. Este supuesto podría no cumplirse en escenarios de cambio estructural profundo.
+    
+    \item \textbf{Exclusión de variables adicionales:} el modelo no incorpora explícitamente otras variables que pueden influir en el consumo eléctrico, como el precio de la energía, la eficiencia energética, la penetración de energías renovables, los cambios demográficos o las políticas de demanda controlada.
+    
+    \item \textbf{Alcance geográfico:} el proyecto se enfoca en el análisis a nivel estatal (Tamaulipas) o nacional, según la disponibilidad de datos, pero no contempla de forma nativa la desagregación regional o municipal, lo que limita su aplicación directa a la planeación local.
+    
+    \item \textbf{Dependencia de tecnologías:} el módulo frontend está construido con React y Vite, por lo que su funcionamiento requiere un navegador moderno con soporte para módulos ES y las APIs utilizadas. Esto puede excluir a usuarios con equipos o navegadores obsoletos.
+    
+    \item \textbf{Carácter informativo:} los resultados del sistema tienen un propósito informativo y de apoyo a la decisión, pero no sustituyen los estudios técnicos detallados ni los procesos formales de planeación del sistema eléctrico nacional o estatal.
+\end{itemize}
